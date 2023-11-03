@@ -47,40 +47,67 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="vf7-sR-vKo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="OnlyChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRh-dg-ZI6">
-                                <rect key="frame" x="87" y="259" width="307" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OnlyChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pER-TU-jfI" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                <rect key="frame" x="87" y="263" width="307" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="qIU-dt-1Dl"/>
+                                    <constraint firstAttribute="height" constant="60" id="Aa9-nS-3Sc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
                                 <color key="textColor" name="BrandBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="faceid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lQV-Md-neE">
-                                <rect key="frame" x="87" y="499" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="faceid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CzV-4z-8OG">
+                                <rect key="frame" x="87" y="507" width="240" height="128"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsu-D1-w6t">
-                                <rect key="frame" x="170" y="546" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TX-jf-4b6">
+                                <rect key="frame" x="156" y="517" width="106" height="109"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="."/>
+                                <connections>
+                                    <action selector="Biometric:" destination="Tim-3B-f4n" eventType="touchUpInside" id="wvF-TG-vcI"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login with Face ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQQ-Qk-soA">
+                                <rect key="frame" x="130" y="464" width="159" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w0w-hE-MVy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="RQQ-Qk-soA" firstAttribute="top" secondItem="pER-TU-jfI" secondAttribute="bottom" constant="141" id="00E-UF-gHg"/>
+                            <constraint firstItem="w0w-hE-MVy" firstAttribute="trailing" secondItem="pER-TU-jfI" secondAttribute="trailing" constant="20" id="7QA-4h-KwJ"/>
                             <constraint firstItem="dWe-nW-2HB" firstAttribute="trailing" secondItem="w0w-hE-MVy" secondAttribute="trailing" id="7Vx-Xq-VaO"/>
+                            <constraint firstItem="w0w-hE-MVy" firstAttribute="trailing" secondItem="RQQ-Qk-soA" secondAttribute="trailing" constant="104" id="7om-wx-eDQ"/>
                             <constraint firstItem="dWe-nW-2HB" firstAttribute="leading" secondItem="w0w-hE-MVy" secondAttribute="leading" id="Ag7-Hh-D9X"/>
-                            <constraint firstItem="cRh-dg-ZI6" firstAttribute="leading" secondItem="w0w-hE-MVy" secondAttribute="leading" constant="87" id="Jrx-tM-dbs"/>
+                            <constraint firstItem="4TX-jf-4b6" firstAttribute="top" secondItem="pER-TU-jfI" secondAttribute="bottom" constant="194" id="C0u-zV-rgT"/>
+                            <constraint firstItem="w0w-hE-MVy" firstAttribute="trailing" secondItem="4TX-jf-4b6" secondAttribute="trailing" constant="152" id="C8v-SL-Vfy"/>
+                            <constraint firstItem="w0w-hE-MVy" firstAttribute="trailing" secondItem="pER-TU-jfI" secondAttribute="trailing" constant="20" id="EkX-xY-u21"/>
+                            <constraint firstItem="CzV-4z-8OG" firstAttribute="top" secondItem="RQQ-Qk-soA" secondAttribute="bottom" constant="21.5" id="Eyd-lk-dNS"/>
+                            <constraint firstItem="h2x-tz-C9Y" firstAttribute="top" secondItem="4TX-jf-4b6" secondAttribute="bottom" constant="119" id="GnW-7u-TZd"/>
+                            <constraint firstItem="h2x-tz-C9Y" firstAttribute="top" secondItem="CzV-4z-8OG" secondAttribute="bottom" constant="109" id="ICu-1p-xUF"/>
+                            <constraint firstItem="CzV-4z-8OG" firstAttribute="top" secondItem="pER-TU-jfI" secondAttribute="bottom" constant="183.5" id="M9r-nj-ltU"/>
+                            <constraint firstItem="w0w-hE-MVy" firstAttribute="trailing" secondItem="CzV-4z-8OG" secondAttribute="trailing" constant="87" id="Sss-nd-2tR"/>
+                            <constraint firstItem="pER-TU-jfI" firstAttribute="leading" secondItem="w0w-hE-MVy" secondAttribute="leading" constant="87" id="TT5-nd-DjQ"/>
+                            <constraint firstItem="CzV-4z-8OG" firstAttribute="leading" secondItem="w0w-hE-MVy" secondAttribute="leading" constant="87" id="V09-15-iTU"/>
+                            <constraint firstItem="w0w-hE-MVy" firstAttribute="trailing" secondItem="RQQ-Qk-soA" secondAttribute="trailing" constant="125" id="YJy-Er-P9a"/>
                             <constraint firstItem="dWe-nW-2HB" firstAttribute="bottom" secondItem="w0w-hE-MVy" secondAttribute="bottom" id="ZsM-5p-lNb"/>
+                            <constraint firstItem="pER-TU-jfI" firstAttribute="top" secondItem="w0w-hE-MVy" secondAttribute="top" constant="171" id="c3m-db-cBp"/>
                             <constraint firstItem="dWe-nW-2HB" firstAttribute="top" secondItem="h2x-tz-C9Y" secondAttribute="bottom" constant="8" id="cnI-Zh-aEc"/>
+                            <constraint firstItem="pER-TU-jfI" firstAttribute="top" secondItem="w0w-hE-MVy" secondAttribute="top" constant="171" id="gBu-16-E33"/>
+                            <constraint firstItem="4TX-jf-4b6" firstAttribute="leading" secondItem="w0w-hE-MVy" secondAttribute="leading" constant="156" id="kbd-Ad-ZZX"/>
+                            <constraint firstItem="RQQ-Qk-soA" firstAttribute="leading" secondItem="w0w-hE-MVy" secondAttribute="leading" constant="130" id="l2P-SA-htT"/>
                             <constraint firstItem="h2x-tz-C9Y" firstAttribute="trailing" secondItem="w0w-hE-MVy" secondAttribute="trailing" id="sNZ-Ul-l2q"/>
                             <constraint firstItem="h2x-tz-C9Y" firstAttribute="leading" secondItem="w0w-hE-MVy" secondAttribute="leading" id="tLN-qz-xiG"/>
-                            <constraint firstItem="w0w-hE-MVy" firstAttribute="trailing" secondItem="cRh-dg-ZI6" secondAttribute="trailing" constant="20" id="xd8-cN-Vkp"/>
+                            <constraint firstItem="pER-TU-jfI" firstAttribute="leading" secondItem="w0w-hE-MVy" secondAttribute="leading" constant="87" id="zZP-kd-sc3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eGW-NT-uA8"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="pER-TU-jfI" id="EhA-Ec-N6x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0w-oB-wTX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -395,7 +422,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
