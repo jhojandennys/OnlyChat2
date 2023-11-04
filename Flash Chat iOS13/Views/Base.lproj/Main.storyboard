@@ -116,7 +116,7 @@
         <!--Register View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RegisterViewController" customModule="Flash_Chat_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterToChat" id="BYZ-38-t0r" customClass="RegisterViewController" customModule="Flash_Chat_iOS13" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h2S-Ae-zdW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,16 +149,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5s-Lc-WfT" userLabel="PasswordView">
                                 <rect key="frame" x="0.0" y="169" width="414" height="177"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3X-Pg-CWg">
-                                        <rect key="frame" x="0.0" y="126" width="414" height="51"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Register">
-                                            <color key="titleColor" name="BrandBlue"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="registerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9dE-Sc-egq"/>
-                                        </connections>
-                                    </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="jY9-l3-E1g">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
                                     </imageView>
@@ -168,6 +158,17 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3X-Pg-CWg">
+                                        <rect key="frame" x="-8" y="126" width="414" height="51"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleColor" name="BrandBlue"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9dE-Sc-egq"/>
+                                            <segue destination="lwd-AH-u8E" kind="show" id="C11-Uc-eL9"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="hLb-P9-NkF" secondAttribute="bottom" constant="82" id="6lD-Jm-0kR"/>
@@ -260,6 +261,7 @@
                                         </state>
                                         <connections>
                                             <action selector="loginPressed:" destination="5v2-hE-4Ub" eventType="touchUpInside" id="Wlk-ga-czK"/>
+                                            <segue destination="lwd-AH-u8E" kind="show" id="RXa-Cj-wpj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -310,7 +312,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S6L-hg-cne">
-                                <rect key="frame" x="0.0" y="48" width="414" height="754"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="710"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="fAI-uC-s9a">
@@ -402,6 +404,14 @@
             <point key="canvasLocation" x="-86.956521739130437" y="134.59821428571428"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="pER-TU-jfI">
+            <size key="intrinsicContentSize" width="235" height="60"/>
+        </designable>
+    </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="C11-Uc-eL9"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="faceid" catalog="system" width="128" height="115"/>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>

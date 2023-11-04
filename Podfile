@@ -10,4 +10,5 @@ pod 'CLTypingLabel'
 
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
+ pod 'Firebase'
 end
