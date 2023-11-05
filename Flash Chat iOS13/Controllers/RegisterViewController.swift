@@ -21,11 +21,18 @@ class RegisterViewController: UIViewController {
                     print(e)
                 }
                 else{
-                    self.performSegue(withIdentifier: "RegisterToChat", sender: self)
-                    
+                    DispatchQueue.main.async {
+                        self.onLoginSuccess()
+                    }
                 }
             }
         }
+    }
+    
+    func onLoginSuccess() {
+        let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let homeVC = mainStoryboard.instantiateViewController(withIdentifier: Constants.ChatViewController)
+        self.navigationController?.pushViewController(homeVC, animated: true)
     }
     
 }
