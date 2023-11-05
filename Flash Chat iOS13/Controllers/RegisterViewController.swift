@@ -22,14 +22,14 @@ class RegisterViewController: UIViewController {
                 }
                 else{
                     DispatchQueue.main.async {
-                        self.onLoginSuccess()
+                        self.onregisterSuccess()
                     }
                 }
             }
         }
     }
     
-    func onLoginSuccess() {
+    func onregisterSuccess() {
         let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
         let homeVC = mainStoryboard.instantiateViewController(withIdentifier: Constants.ChatViewController)
         self.navigationController?.pushViewController(homeVC, animated: true)

@@ -24,10 +24,9 @@ class WelcomeViewController: UIViewController {
         
     }
     
-    let ChatViewController = "ChatViewController"
 
     
-    @objc func authenticationCompletionHandler(loginStatusNotification: Notification) {
+     @objc func authenticationCompletionHandler(loginStatusNotification: Notification) {
         if let _ = loginStatusNotification.object as? FaceIdAuth, let userInfo = loginStatusNotification.userInfo {
             if let authStatus = userInfo[FaceIdAuth.status] as? FaceIdAuthStatus {
                 if authStatus.success {
@@ -52,7 +51,7 @@ class WelcomeViewController: UIViewController {
         authenticateWithBiometric()
     }
     
-    func authenticateWithBiometric() {
+    public func authenticateWithBiometric() {
         let bioAuth = FaceIdAuth()
         bioAuth.reasonString = "To login into the app"
         bioAuth.authenticationWithBiometricID()
@@ -60,7 +59,7 @@ class WelcomeViewController: UIViewController {
     
     func onLoginSuccess() {
         let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let homeVC = mainStoryboard.instantiateViewController(withIdentifier: ChatViewController)
+        let homeVC = mainStoryboard.instantiateViewController(withIdentifier: Constants.ChatViewController)
         self.navigationController?.pushViewController(homeVC, animated: true)
     }
     
