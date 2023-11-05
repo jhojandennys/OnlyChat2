@@ -642,6 +642,9 @@ PODS:
     - FirebaseAnalytics (~> 10.17.0)
   - Firebase/CoreOnly (10.17.0):
     - FirebaseCore (= 10.17.0)
+  - Firebase/Firestore (10.17.0):
+    - Firebase/CoreOnly
+    - FirebaseFirestore (~> 10.17.0)
   - FirebaseAnalytics (10.17.0):
     - FirebaseAnalytics/AdIdSupport (= 10.17.0)
     - FirebaseCore (~> 10.0)
@@ -814,8 +817,8 @@ PODS:
 DEPENDENCIES:
   - CLTypingLabel
   - Firebase
+  - Firebase/Firestore
   - FirebaseAuth
-  - FirebaseFirestore
 
 SPEC REPOS:
   trunk:
@@ -868,6 +871,6 @@ SPEC CHECKSUMS:
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
 
-PODFILE CHECKSUM: 621f32d92a743c2668bd7cbbd56a9af4cdcc9365
+PODFILE CHECKSUM: 494c2263b126d014ca86104e038044d9f5f82f62
 
 COCOAPODS: 1.13.0
