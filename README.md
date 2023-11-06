@@ -5,7 +5,7 @@
 
 ## What is the project about
 
-* Integrate third party libraries in your app using Cocoapods and Swift Package Manager.
+* Integrate third party libraries using Cocoapods and Swift Package Manager.
 * Store data in the cloud using Firebase Firestore.
 * Create query and sort the Firebase database.
 * Use Firebase for user authentication, registration and login.
